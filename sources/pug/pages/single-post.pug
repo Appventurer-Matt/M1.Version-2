@@ -1,0 +1,79 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Single post'
+
+block page
+	include ../sections/_header-classic
+
+	+breadcrumbs
+
+	section.section.section-md
+		.container
+			.row.row-30
+				.col-md-3
+					.single-post.single-post-author
+						.post-author-avatar
+							+img('user-photo-140x140.png')
+						a(href="#").post-author-name Henry Wilson
+						.single-post.html-date
+							time(datetime="2019-01-25T11:42:05+00:00"  title="2019-01-25T11:42:05+00:00") Posted on January 25, 2019
+				.col-md-9
+					.single-post.html
+						article.single-post.html-article
+							.entry-meta
+								ul.post-categories
+									li
+										a.button-primary(href="#") News
+								a.comments-link(href="#") 0 Comment(s)
+							h2 Cartonization technology in parcel freight
+							p Sit amet est placerat in egestas erat imperdiet sed euismod. Leo duis ut diam quam nulla porttitor. Vulputate mi sit amet mauris commodo. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida.
+							p Phasellus vestibulum lorem sed risus ultricies tristique nulla. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Velit aliquet sagittis id consectetur. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Risus feugiat in ante metus.
+							ul.default-list
+								li Vel turpis nunc eget lorem dolor sed viverra ipsum. Netus et malesuada fames ac turpis. Eu volutpat odio facilisis mauris sit amet massa. Feugiat sed lectus vestibulum mattis ullamcorper velit.
+							p In hac habitasse platea dictumst quisque sagittis purus sit amet. Libero id faucibus nisl tincidunt eget. Sit amet massa vitae tortor condimentum lacinia quis vel.
+							.post-media-wrap
+								+img('post-img-1-1024x640')
+							p Purus sit amet volutpat consequat mauris. Facilisis gravida neque convallis a cras semper. Adipiscing elit duis tristique sollicitudin nibh sit. Amet consectetur adipiscing elit pellentesque habitant. Tempor orci dapibus ultrices in iaculis nunc. Quis varius quam quisque id.
+
+
+						.article-nav-wrap
+							.row.row-narrow-60.row-15
+								.col-lg-6.col-md-12
+									.article-nav.prev
+										span previous
+										h4: a(href="#") Usage of electric vehicles in work of our company
+								.col-lg-6.col-md-12
+									.article-nav.next
+										span next
+										h4: a(href="#") Review: collaboration with a new cargo-only airport
+						.article-comment
+							h4 Leave a Reply
+							p Your email address will not be published. Required fields are marked *
+
+							form.rd-mailform.text-left.comment-form(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+								.form-wrap.form-comment-area
+									label.form-label(for="contact-message") Comment*
+									textarea#contact-message.form-input(name="message" data-constraints='@Required')
+								.form-wrap
+									label.form-label(for="contact-name") Name*
+									input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+								.form-wrap
+									label.form-label(for="contact-email") E-Mail*
+									input#contact-email.form-input(type="email" name="email" data-constraints='@Required @Email')
+								.form-wrap
+									label.form-label(for="contact-phone") Website
+									input#contact-phone.form-input(type="text" name="website")
+								.form-button.text-center.text-lg-left
+									button(type="submit").button-block.button.button-primary submit comment
+
+	//Footer
+	include ../sections/_footer-classic
+
+
+
+
+
+
+
+

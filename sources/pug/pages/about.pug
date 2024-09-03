@@ -1,0 +1,132 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'About'
+
+block page
+	include ../sections/_header-classic
+	include ../components/card
+
+	+breadcrumbs
+
+	// About us
+	section.section.section-lg
+		.container
+			.row.row-30
+				.col-lg-6.text-center.wow.fadeInleft
+					.service-img-box
+						+img('about-1-580x569.jpg')
+				.col-lg-6.align-self-center.wow.fadeInRight
+					.advantages-tabs-wrap
+						h2 Why is  #[span.text-primary Mingo] the best choice for you?
+						p If you still have any doubts about choosing our company, here are three main reasons why our clients choose us.
+						#accordion3.card-group-custom.card-group-classic( role='tablist' aria-multiselectable='false' )
+							+card({
+								show: true,
+								parentId: 'accordion3',
+								title: 'A Personal Service'
+							}).card-corporate
+								p Our commitment to our customers is to ensure efficient, reliable and trouble free management of your freight requirements - by providing the very best service along with the highly affordable rates available to all our clients
+
+							+card({
+								parentId: 'accordion3',
+								title: 'Customer-Tailored Freight Options'
+							}).card-corporate
+								p Multiple modes of freight transportation: intermodal, LTL, truckload, flatbed, temperature controlled, bulk and final mile services. Supported industries: food & beverage, wine & spirits plastics & packaging, agriculture.
+
+
+							+card({
+								parentId: 'accordion3',
+								title: 'Professional Cargo Tracking'
+							}).card-corporate
+								p With our innovative solutions, you can manage your freight, bulk and container transport at the click of a button online - anytime, anywhere. We use, web-based software to track and trace all cargos that we operate with.
+	//Team carousel
+	include ../sections/_team-crousel
+	//We work quickly
+	section.section.section-lg
+		.container
+			.row.row-30
+				.col-lg-8
+					.block-lg
+						.block-lg
+							.row.row-30
+								.col-md-6.wow.fadeInUp(data-wow-delay=".1s")
+									a.service-box(href="#" style="background: url(images/service-img-1.png) no-repeat right bottom" )
+										h5 Cost savings
+										p Save your money with our logistics service taking advantage of quickly delivery.
+								.col-md-6.wow.fadeInUp(data-wow-delay=".2s")
+									a.service-box(href="#" style="background: url(images/service-img-2.png) no-repeat right bottom")
+										h5 Secure services
+										p We provide security of your delivery. You can use our online tracking system to check where your cargo is.
+								.col-md-6.wow.fadeInUp(data-wow-delay=".3s")
+									a.service-box(href="#" style="background: url(images/service-img-3.png) no-repeat right bottom")
+										h5 Cargo express
+										p Our educated couriers deliver your cargo in the right place at the right time safely.
+								.col-md-6.wow.fadeInUp(data-wow-delay=".4s")
+									a.service-box(href="#" style="background: url(images/service-img-4.png) no-repeat right bottom")
+										h5 Proven Experience
+										p Thousands of happy clients, hundreds of permanent customers are the result of our work.
+				.col-lg-4.offset-xl-40.wow.fadeInRihgt
+					h2.wow.fadeInLeft(data-wow-delay="0.1s") We work quickly and #[span.text-primary efficiently]!
+					p.wow.fadeInLeft(data-wow-delay="0.2s") We provide local and international delivery services. Mingo is number one company implementing #[span.text-primary logistics services.]  With our rich experience we have unique skills and professional staff.
+					p.wow.fadeInLeft(data-wow-delay="0.3s") Working closely with our clients to meet their exact needs has always been very rewarding for us.
+
+	//Discount form
+	section.section.section-md.bg-1
+		.container
+			.row.row-30.flex-column-reverse.flex-lg-row
+				.col-lg-6.col-xl-5.offset-xl-40.wow.fadeInLeft
+					h2 #[span.text-primary Contact us] & get a discount for delivery
+					p Whether you require delivery or  #[span.text-primary logistics services] or fulfillment, defined freight forwarding, or a complete supply chain solution, we are here for you.
+					p We think about our customers and our work based on such values as:
+					.row.row-30
+						.col-lg-5.col-md-6
+							ul.list-marked.text-dark-blue
+								li Quality;
+								li Speed;
+								li Integrity;
+								li Affordability;
+								li Efficiency;
+						.col-lg-5.col-md-6
+							ul.list-marked.text-dark-blue
+								li Innovations;
+								li Responsibility;
+								li Preciseness;
+								li Friendliness;
+				.col-lg-6.wow.fadeInRight
+					form.rd-form.rd-mailform.contact-form.form-input-bordered.block-xl-right(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.row.row-20
+							.col-md-12
+								.form-wrap
+									input#contact-name.form-input(type='text' name='name' data-constraints='@Required')
+									label.form-label(for='contact-name') Name
+
+							.col-md-12
+								.form-wrap
+									input#contact-phone.form-input(type='text' name='phone' data-constraints='@Numeric')
+									label.form-label(for='contact-phone') Phone
+
+							.col-md-12
+								.form-wrap
+									input#contact-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+									label.form-label(for='contact-email') E-mail
+
+							.col-12
+								.form-wrap
+									label.form-label(for='contact-message') Message
+									textarea#contact-message.form-input(name='message' data-constraints='@Required')
+
+							.col-md-6
+								button.button.button-primary.btn-sm(type='submit') send request
+	//Testimonials
+	include ../sections/_review-cart
+	//Footer
+	include ../sections/_footer-classic
+
+
+
+
+
+
+
+

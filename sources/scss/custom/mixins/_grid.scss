@@ -1,0 +1,61 @@
+//
+// Grid-dedicated responsive offset system
+//
+
+@mixin grid-offset($offset) {
+	margin-bottom: -$offset;
+
+	&:empty {
+		margin-bottom: 0;
+	}
+
+	> * {
+		margin-bottom: $offset;
+	}
+}
+
+$grid-gutter-width-narrow-20: 20px;
+$grid-gutter-width-narrow-20: 20px;
+
+$grid-gutter-width-narrow-60: 60px;
+// Row Narrow
+.row-narrow {
+	margin-right: ($grid-gutter-width-narrow / -2);
+	margin-left: ($grid-gutter-width-narrow / -2);
+
+
+	> .col,
+	> [class*="col-"] {
+		padding-right: ($grid-gutter-width-narrow / 2);
+		padding-left: ($grid-gutter-width-narrow / 2);
+	}
+
+}
+
+// Row Narrow
+.row-narrow-20 {
+	margin-right: ($grid-gutter-width-narrow-20 / -2);
+	margin-left: ($grid-gutter-width-narrow-20 / -2);
+
+
+	> .col,
+	> [class*="col-"] {
+		padding-right: ($grid-gutter-width-narrow-20 / 2);
+		padding-left: ($grid-gutter-width-narrow-20 / 2);
+	}
+
+}
+
+.row-narrow-50 {
+@include media-breakpoint-up(md) {
+	margin-right: ($grid-gutter-width-narrow-60 / -2);
+	margin-left: ($grid-gutter-width-narrow-60 / -2);
+
+
+	> .col,
+	> [class*="col-"] {
+		padding-right: ($grid-gutter-width-narrow-60 / 2);
+		padding-left: ($grid-gutter-width-narrow-60 / 2);
+	}
+}
+}

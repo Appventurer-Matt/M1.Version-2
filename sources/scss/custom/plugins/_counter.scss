@@ -1,0 +1,37 @@
+/** @section Counter */
+
+.counter-list{
+  display: flex;
+  justify-content: center;
+  li{
+    width: 25%;
+    display: flex;
+  }
+  li {
+  }
+}
+
+.box-counter-classic {
+  display: flex;
+  .box-counter-main{
+    font-size: 38px;
+    line-height: 1;
+    font-weight: 600;
+    color: $primary;
+    font-family: $font-family-base;
+    display: flex;
+  }
+  .box-counter-title{
+    margin: 0 0 0 10px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $gray-500;
+    letter-spacing: normal;
+  }
+}

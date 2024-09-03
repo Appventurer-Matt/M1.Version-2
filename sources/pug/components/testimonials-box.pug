@@ -1,0 +1,9 @@
+mixin testimonials-box(obj)
+	.review-box-wrap
+		.review-box-intro
+			.review-box-media
+				+img(obj.img + '.jpg')
+			.review-box-title
+				span.review-name=obj.name
+				span.review-date=obj.date
+		p=obj.text

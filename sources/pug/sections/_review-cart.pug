@@ -1,0 +1,34 @@
+include ../components/testimonials-box
+section.section.section-lg
+	.container
+		.row.row-30
+			.col-12
+				.row.justify-content-md-between.row-20
+					.col-lg-5.col-md-6
+						h2.wow.fadeInLeft What our clients say #[span.text-primary about us]
+					.col-lg-6.col-md-3.d-flex.flex-column.justify-content-end.text-right
+						a(href="#").btn-xs.button.button-icon.button-icon-right.button-default-outline.wow.fadeInRight.align-self-md-end
+							span.icon-xs.linearicons-chevron-right.font-weight-bold
+							| Read More
+
+			.col-lg-4.col-sm-12.col-md-6.col-12.wow.fadeInUp
+				+testimonials-box({
+					img:  'user-img-1',
+					name: 'Kathy Ross',
+					date: 'August 05, 2019',
+					text: 'They are professionals in international shipping! I recommend Mingo to everybody, who is looking for perfect logistics service.'
+				})
+			.col-lg-4.col-sm-12.col-md-6.col-12.wow.fadeInUp(data-wow-delay="0.2s")
+				+testimonials-box({
+					img: 'user-img-2',
+					name: 'Roger Anderson',
+					date: 'August 05, 2019',
+					text: 'Mingo is a great delivery company! This is highlighted by their excellent communication, sense of urgency, and the excellent level of customer service.'
+				})
+			.col-lg-4.col-sm-12.col-md-6.col-12.wow.fadeInUp(data-wow-delay="0.3s")
+				+testimonials-box({
+					img: 'user-img-3',
+					name: 'Linda Kelly',
+					date: 'August 05, 2019',
+					text: 'I used their services multiple times and always was glad with the result of their work. Their experienced dispatchers always help with any question.'
+				})

@@ -1,0 +1,31 @@
+include ../components/counter
+section.section.section-sm.bg-2
+	.container
+		.row-20.row
+			.col-lg-3.col-sm-6.d-flex.justify-content-center.wow.fadeInUp
+				+counter-classic({
+					title: 'Satisfied  <br> Clients',
+					prefix: '+',
+					value: 1200
+				})
+			.col-lg-3.col-sm-6.d-flex.justify-content-center.wow.fadeInUp(data-wow-delay=".2s")
+				+counter-classic({
+					title: 'Delivered  <br> Cargos',
+					prefix: '+',
+					value: 1000
+				})
+			.col-lg-3.col-sm-6.d-flex.justify-content-center.wow.fadeInUp(data-wow-delay=".3s")
+				+counter-classic({
+					title: 'Qualified<br>  Employees ',
+					prefix: '+',
+					value: 200
+				})
+			.col-lg-3.col-sm-6.d-flex.justify-content-center.wow.fadeInUp(data-wow-delay=".4s")
+				+counter-classic({
+					title: 'National <br> Partners',
+					prefix: '+',
+					value: 9
+				})
+
+
+

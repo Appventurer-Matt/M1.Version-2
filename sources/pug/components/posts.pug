@@ -1,0 +1,26 @@
+mixin post-classic(obj)
+	a(href="single-post.html").post-classic
+		.post-date=obj.dateText
+		h4.post-title=obj.title
+		p=obj.text
+
+//- Post classic-3
+mixin post-classic-3(obj)
+	.post-classic-3
+		.media-wrap
+			if (obj.tag)
+				.tag= obj.tag
+			a(href=obj.link)
+				+img(obj.image + '.jpg')
+		h5.title: a(href=obj.link)= obj.title
+		p.exeption= obj.exeption
+		.time= obj.time
+
+
+
+//- Post minimal
+mixin post-minimal(obj)
+	.post-minimal
+		h6.title
+			a(href= obj.link)= obj.title
+		.time= obj.time

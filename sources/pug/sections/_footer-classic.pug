@@ -1,0 +1,68 @@
+footer.section.footer-classic
+	.container
+		.row.row-30.justify-content-center
+			.col-lg-3.col-md-12.text-center.text-lg-left
+				+logo
+			.col-lg-3.col-md-4.wow.fadeInUp
+				.contact-detail
+					.detail-icon.icon.linearicons-telephone
+					.detail-info
+						span Phone:
+						a(href="tel:#") 1-800-12456-897
+			.col-lg-3.col-md-4.wow.fadeInUp
+				.contact-detail
+					.detail-icon.icon.linearicons-map-marker
+					.detail-info
+						span Email:
+						a(href="mailto:#") mail@demolink.org
+			.col-lg-3.col-md-4.wow.fadeInUp
+				.contact-detail
+					.detail-icon.icon.linearicons-clock3
+					.detail-info
+						span Opening Hours:
+						span.text-white Mon. - Fri. 9:00 - 18:00
+
+			.col-12
+				.divider
+		.row.row-50
+			.col-lg-3.col-sm-6.wow.fadeInUp
+				h6.heading-6 About us
+				p.text-gray-4 Mingo provides local and international delivery and logistics services. Our team has unique skills and rich professional experience.
+			.col-lg-3.col-sm-6.d-sm-flex.flex-column.align-items-center.wow.fadeInUp
+				h6.heading-6 Quick links
+				ul.list-marked-2
+					li
+						a(href="about.html") About
+					li
+						a(href="services.html") Services
+					li
+						a(href="team.html") Team
+					li
+						a(href="news.html") News
+					li
+						a(href="contacts.html") Contacts
+			.col-lg-3.col-sm-6.wow.fadeInUp
+				h6.heading-6 Latest news
+				ul.footer-news
+					li
+						h6: a(href="single-post.html") Cartonization technology in parcel freight
+						time(datetime="2019-01-25T11:42:05+00:00"  title="2019-01-25T11:42:05+00:00") January 25, 2019
+					li
+						h6: a(href="single-post.html") Review: collaboration with a new cargo-only airport
+						time(datetime="2019-01-25T11:42:05+00:00"  title="2019-01-25T11:42:05+00:00") January 25, 2019
+			.col-lg-3.col-sm-6.wow.fadeInUp
+				h6.heading-6 Newsletter subscription
+				form.rd-form.rd-mailform.rd-form-inline.subscribe-form(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+					.form-wrap
+						input.form-input(id="subscribe-form-email-2" type="email" name="email" data-constraints="@Email @Required")
+						label.form-label(for="subscribe-form-email-2") Your E-mail
+						.form-button
+							button.button.button-icon-2(type="submit")
+								span.fa.fa-paper-plane
+
+				p.text-gray-5 Enter your e-mail to subscribe to our newsletter and receive the latest news.
+
+			.col-12.fadeInLeft.wow
+				+rights
+	//+rights
+

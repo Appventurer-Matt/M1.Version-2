@@ -1,0 +1,33 @@
+include ../components/card
+section.section.section-custom-1
+	.container
+		.row.row-30
+			.col-lg-6.align-self-center.wow.fadeInLeft
+				.advantages-tabs-wrap
+					h2 Why is  #[span.text-primary Mingo] the best choice for you?
+					p If you still have any doubts about choosing our company, here are three main reasons why our clients choose us.
+					#accordion2.card-group-custom.card-group-classic( role='tablist' aria-multiselectable='false' )
+						+card({
+							show: true,
+							parentId: 'accordion2',
+							title: 'A Personal Service'
+						}).card-corporate
+							p Our commitment to our customers is to ensure efficient, reliable and trouble free management of your freight requirements - by providing the very best service along with the highly affordable rates available to all our clients
+
+						+card({
+							parentId: 'accordion2',
+							title: 'Customer-Tailored Freight Options'
+						}).card-corporate
+							p Multiple modes of freight transportation: intermodal, LTL, truckload, flatbed, temperature controlled, bulk and final mile services. Supported industries: food & beverage, wine & spirits plastics & packaging, agriculture.
+
+
+						+card({
+							parentId: 'accordion2',
+							title: 'Professional Cargo Tracking'
+						}).card-corporate
+							p With our innovative solutions, you can manage your freight, bulk and container transport at the click of a button online - anytime, anywhere. We use, web-based software to track and trace all cargos that we operate with.
+			.col-lg-6.text-center.wow.fadeInRight
+				.service-img-box
+					+img('service-img-1-477x665.png')
+
+

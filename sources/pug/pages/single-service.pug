@@ -1,0 +1,80 @@
+extends ../_skeleton
+
+block variables
+	- pageName = 'Single Service'
+
+block page
+	include ../sections/_header-classic
+	include ../components/card
+
+	+breadcrumbs
+
+	section.section.section-lg
+		.container
+			.row.row-50
+				.col-lg-8
+					.row.row-40
+						.col-12
+							+img('single-service-1-770x380.jpg').img-rounded.wow.fadeInLeft
+						.col-12
+							h6.wow.fadeInLeft(data-wow-delay="0.1s") Mingo is in daily direct contact with #[span.text-primary local] and #[span.text-primary international] ports.
+							p.wow.fadeInLeft We deliver your cargo to various countries by the sea using modern vessels. Cargo transportation by sea is one of the fastest growing modes of transport between continents in search of efficient and sufficiently cost-effective supply chain options for low-cost goods. Sea transport advantage over other modes of transport is particularly clear when transporting large quantities of cargo over long distances.
+							p.wow.fadeInLeft Mingo itself operates as a Non Vessel Operating Common Carrier (NVOOC) and has close links to many shipping companies through preferred carrier programmes.
+						.col-12
+							h6.wow.fadeInLeft Professional sea freight logistics services:
+							ul.check-list.offset-top-20
+								li.wow.fadeInLeft
+									h6.font-weight-normal The Best Solution For You
+									p We are able to always offer you the necessary freight space at competitive prices, even during peak seasons.
+								li.wow.fadeInLeft
+									h6.font-weight-normal Planning Reliability
+									p Using punctual groupage freight departures from local and international ports and fixed timetables, we can offer you planning reliability in quickly and safe delivery.
+								li.wow.fadeInLeft
+									h6.font-weight-normal Value-Added Services
+									p We also offer you value-added services like warehousing, packaging and labelling as part of our range of products designed to your individual purposes. We can also deal with the complete customs procedures for your sea freight. We provide the quickest possible delivery of goods by waterway.
+						.col-12
+							h6.wow.fadeInLeft Reliability in all the local and international ports
+							p.wow.fadeInLeft Full service for FCL and LCL: We provide warehousing and logistics services at each gateway. With our multi-modal transport solutions with integrated pre-carriage and on-forwarding processing we are able to achieve the shortest possible transit times for your ocean freight.
+						.col-12
+							.row.row-30
+								.col-md-6.d-flex.wow.fadeInLeft
+									a.service-box.single-service(href="#" style="background: url(images/service-img-3.png) no-repeat right bottom")
+										h5 Cargo express
+										p Our educated couriers will deliver your cargo in the right place at the right time safely.
+								.col-md-6.d-flex.wow.fadeInRight
+									a.service-box.single-service(href="#" style="background: url(images/service-img-4.png) no-repeat right bottom")
+										h5 Proven Experience
+										p Thousands of happy clients, hundreds of permanent customers are the result of our work.
+						.col-12
+							p.wow.fadeInLeft Thanks to the expertise and knowledge, Mingo Logistics Company offers you a professional service of smooth custom clearance through customs checkpoints. Due to our license and professional approach in sea freight logistics we are able to perform clearance of your goods received in the local an international ports. By working in this proactive way, we can save time and offer you a next day delivery. Our employees are ready to guide you through the complex port layouts, regulations and cultural norms to ship your cargo from port to port.
+				.col-lg-4
+					ul.sidebar-categories
+						li.active.fadeInRight.wow
+							h6: a(href="#") Sea freight
+						li.fadeInRight.wow
+							h6: a(href="#") Air freight
+						li.fadeInRight.wow
+							h6: a(href="#") Project Forwarding
+						li.fadeInRight.wow
+							h6: a(href="#") Logistics
+						li.fadeInRight.wow
+							h6: a(href="#") Warehousing
+						li.fadeInRight.wow
+							h6: a(href="#") Cargo insurance
+						li.feed-back.fadeInRight.wow
+							h6.font-weight-normal Still have questions?
+							.contact-detail
+								.detail-icon.icon.linearicons-telephone
+								.detail-info
+									span Phone:
+									a(href="tel:#") 1-800-12456-897
+	//Footer
+	include ../sections/_footer-classic
+
+
+
+
+
+
+
+

@@ -1,0 +1,306 @@
+/** @section Lists */
+
+// Vertical list
+.list {
+	> li + li {
+		margin-top: 10px;
+	}
+}
+
+.list-xs > li + li {
+	margin-top: 5px;
+}
+
+.list-sm > li + li {
+	margin-top: 10px;
+}
+
+.list-md > li + li {
+	margin-top: 18px;
+}
+
+.list-lg > li + li {
+	margin-top: 25px;
+}
+
+.list-xl > li + li {
+	margin-top: 30px;
+}
+
+@include media-breakpoint-up(md) {
+	.list-xl > li + li {
+		margin-top: 60px;
+	}
+}
+
+
+// List inline
+.list-inline {
+	> li {
+		display: inline-block;
+	}
+}
+
+html {
+	.list-inline-md {
+		@include spacing(20px, 8px);
+
+		@include media-breakpoint-up(lg) {
+			@include spacingX(30px);
+		}
+	}
+}
+
+
+// List terms
+.list-terms {
+	dt + dd {
+		margin-top: 5px;
+	}
+	dd + dt {
+		margin-top: 25px;
+	}
+}
+
+* + .list-terms {
+	margin-top: 25px;
+}
+
+
+// Index list
+.index-list {
+	counter-reset: li;
+
+	> li {
+		.list-index-counter {
+			&:before {
+				content: counter(li, decimal-leading-zero);
+				counter-increment: li;
+			}
+		}
+	}
+}
+
+
+// Marked list
+.list-marked {
+	text-align: left;
+
+	> li {
+		position: relative;
+		padding-left: 25px;
+
+		&::before {
+			position: absolute;
+			display: inline-block;
+			left: 0;
+			top: -1px;
+			min-width: 25px;
+			content: "\f00c";
+			font: 400 14px/24px 'FontAwesome';
+			color: $primary;
+		}
+	}
+	> li + li {
+		margin-top: 8px;
+	}
+}
+
+.list-marked-2{
+	margin-bottom: -12px;
+	@include media-breakpoint-up(xl) {
+		margin-left: -13px;
+	}
+	> *{
+		margin-bottom: 12px;
+	}
+	> li {
+		position: relative;
+		padding-left: 12px;
+
+		&::before {
+			position: absolute;
+			display: inline-block;
+			width: 12px;
+			left: 0;
+			top: -2px;
+			content: "\ec3c";
+			font: 700 6px/24px 'Linearicons';
+			color: $primary;
+		}
+	}
+}
+
+* + .list-marked {
+	margin-top: 15px;
+}
+
+p + .list-marked {
+	margin-top: 10px;
+}
+
+
+// Ordered List
+.list-ordered {
+	counter-reset: li;
+	text-align: left;
+
+	> li {
+		position: relative;
+		padding-left: 25px;
+
+		&:before {
+			position: absolute;
+			content: counter(li, decimal) '.';
+			counter-increment: li;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			width: 15px;
+			color: $gray-400;
+		}
+	}
+
+	> li + li {
+		margin-top: 10px;
+	}
+}
+
+* + .list-ordered {
+	margin-top: 15px;
+}
+
+.rd-navbar-aside .list-inline{
+	margin-left: -37px;
+	> *{
+		margin-left: 37px;
+	}
+}
+
+.social-list{
+	display: flex;
+	margin-left: -16px;
+	> * {
+		margin-left: 16px;
+	}
+	li a {
+		color: $gray-lighten;
+		&:hover{
+			color: $primary;
+		}
+	}
+}
+
+.check-list{
+	li{
+		padding-left: 38px;
+		position: relative;
+		+ li{
+			margin-top: 16px;
+		}
+		&:before{
+			content: '\ec59';
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-family: 'Linearicons';
+			font-size: 26px;
+			line-height: 1;
+			font-weight: 600;
+			color: $primary;
+		}
+	}
+}
+
+.sidebar-categories{
+	li{
+		background-color: rgba($dark-blue,.03);
+		padding: 15px 30px;
+		border-radius: 6px;
+		h6{
+			font-weight: 500;
+		}
+		+ li{
+			margin-top: 16px;
+		}
+		&.feed-back{
+			padding-top: 42px;
+			padding-bottom: 42px;
+			.contact-detail{
+				display: flex;
+				margin-top: 25px;
+				font-size: 16px;
+				align-items: center;
+				a{
+					@include link($dark-blue, $primary);
+          font-weight: 500;
+				}
+				.icon{
+					font-size: 36px;
+					color: $primary;
+					margin-right: 20px;
+				}
+			}
+			.detail-info{
+				display: flex;
+				flex-direction: column;
+				span{
+					color: $gray-lighten;
+					font-size: 16px;
+					font-weight: 400;
+				}
+			}
+		}
+		a{
+			@include link($dark-blue, $primary);
+		}
+		&.active{
+			a{
+				color: $primary;
+			}
+		}
+  }
+
+}
+
+.default-list{
+	margin-top: 27px;
+	li{
+		position: relative;
+		padding-left: 27px;
+		&:before{
+			content: '';
+			position: absolute;
+
+			left: 8px;
+			top: 8px;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: $gray-500;
+		}
+	}
+}
+
+.list-tags {
+	display: flex;
+	flex-wrap: wrap;
+	@include group(10px, 17px);
+
+	.tag {
+		display: inline-block;
+		padding: 6px 16px;
+		font-size: 13px;
+		font-weight: 500;
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+		color: $body-color;
+		border: 1px solid;
+
+		&:hover {
+			color: $white;
+			background: $primary;
+			border-color: $primary;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+mixin service-card(obj)
+	.service-box-classic
+		.service-img
+			+img(obj.img + '.png')
+		h6: a(href="single-service.html")=obj.title
+		p=obj.description

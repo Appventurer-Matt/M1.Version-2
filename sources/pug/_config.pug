@@ -1,0 +1,92 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css?family=Poppins:300,400,500,600",
+		logo = {
+			default: 'logo-default-344x146.png',
+			inverse: 'logo-inverse-162x75.png',
+			name: 'Mingo'
+		},
+		links = {
+			post: 'blog-post.html',
+			getTemplate:'#get-template'
+		},
+		colors = {
+			primary: '#FF8329'
+		},
+		menu = [
+			{
+				title: 'Home',
+				link: 'index.html'
+			},
+			{
+				title: 'About'
+			},
+			{
+				title: 'Services',
+				dropdown: [
+					{
+						title: 'Single Service',
+						link: 'single-service.html'
+					}
+				]
+			},
+			{
+				title: 'Team'
+			},
+			{
+				title: 'News',
+			dropdown: [
+				{
+				title: 'Single Post',
+				link: 'single-post.html'
+				}
+			]
+			},
+			{
+				title: 'Pages',
+				link: '#',
+				megamenu: [
+					{
+						title: 'Elements',
+						link: null,
+						list: [
+							{ title: 'Typography' },
+							{ title: 'Buttons' },
+							{ title: 'Forms' },
+							{ title: 'Tabs and accordions' },
+							{ title: 'Progress bars' },
+							{ title: 'Tables' }
+						]
+					},
+					{
+						title: 'Pages 1',
+						link: null,
+						list: [
+							{ title: 'Grid system' },
+							{ title: 'Privacy policy' },
+							{ title: 'Services' },
+							{ title: 'Single Service' }
+
+						]
+					},
+					{
+						title: 'Pages 2',
+						link: null,
+						list: [
+							{ title: 'Under Construction' },
+							{ title: 'Search results' },
+							{ title: 'News' },
+							{ title: 'Single Post' }
+						]
+					}
+				]
+			},
+			{
+				title: 'Contacts'
+			}
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home'

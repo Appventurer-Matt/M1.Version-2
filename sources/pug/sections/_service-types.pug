@@ -1,0 +1,46 @@
+include ../components/service-card
+section.section.section-lg
+	.container
+		.row.row-30
+			.col-12
+				.row.justify-content-lg-between.row-30
+					.col-lg-4.col-md-12.text-center.text-lg-left
+						h2.wow.fadeInLeft #[span.text-primary Services] that we specialize in
+					.col-lg-6.col-md-12.text-center.text-lg-left.d-flex.flex-column.justify-content-end
+						p.wow.fadeInRight We offer you with a wide range of services, which will make your  #[span.text-primary delivery process] easy and quick. All our services are presented here.
+			.col-lg-4.col-sm-12.col-md-6.col-12.wow.fadeInUp(data-wow-delay="0.1s")
+				+service-card({
+					img: 'services-icon-5',
+					title: 'Sea Freight',
+					description: 'We deliver your cargo to various countries by the sea using modern vessels.'
+				})
+			.col-lg-4.col-sm-12.col-md-6.col-12.wow.fadeInUp(data-wow-delay="0.2s")
+				+service-card({
+					img: 'services-icon-6',
+					title: 'Air Freight',
+					description: 'Air delivery is the fastest way to deliver shipment overseas. We work with different cargos.'
+				})
+			.col-lg-4.col-sm-12.col-md-6.col-12.wow.fadeInUp(data-wow-delay="0.3s")
+				+service-card({
+					img: 'services-icon-7',
+					title: 'Project Forwarding',
+					description: 'Our team deals with your project forwarding from the beginning to the project completion.'
+				})
+			.col-lg-4.col-sm-12.col-md-6.col-12.wow.fadeInUp(data-wow-delay="0.4s")
+				+service-card({
+					img: 'services-icon-8',
+					title: 'Logistics',
+					description: 'We provide professional logistics services. Our trucks are reliable and fast – you will get your shipment in time.'
+				})
+			.col-lg-4.col-sm-12.col-md-6.col-12.wow.fadeInUp(data-wow-delay="0.5s")
+				+service-card({
+					img: 'services-icon-9',
+					title: 'Warehousing',
+					description: 'You can use our service of goods storage according to your needs so your shipments will be safe.'
+				})
+			.col-lg-4.col-sm-12.col-md-6.col-12.wow.fadeInUp(data-wow-delay="0.1s")
+				+service-card({
+					img: 'services-icon-10',
+					title: 'Cargo Insurance',
+					description: 'We ensure protection of cargo from any damage during shipping, whether by land, sea or air.'
+				})

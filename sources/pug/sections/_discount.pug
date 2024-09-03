@@ -1,0 +1,48 @@
+section.section.section-md.bg-1
+	.container
+		.row.row-50.flex-column-reverse.flex-lg-row
+			.col-lg-6.wow.fadeInLeft
+				form.rd-form.rd-mailform.contact-form.form-input-bordered(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+					.row.row-20
+						.col-md-12
+							.form-wrap
+								input#contact-name.form-input(type='text' name='name' data-constraints='@Required')
+								label.form-label(for='contact-name') Name
+
+						.col-md-12
+							.form-wrap
+								input#contact-phone.form-input(type='text' name='phone' data-constraints='@Numeric')
+								label.form-label(for='contact-phone') Phone
+
+						.col-md-12
+							.form-wrap
+								input#contact-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+								label.form-label(for='contact-email') E-mail
+
+						.col-12
+							.form-wrap
+								label.form-label(for='contact-message') Message
+								textarea#contact-message.form-input(name='message' data-constraints='@Required')
+
+						.col-md-6
+							button.button.button-primary.btn-sm(type='submit') send
+			.col-lg-6.col-xl-5.offset-xl-40.wow.fadeInRight
+				h2 #[span.text-primary Contact us] & get a discount for delivery
+				p Whether you require delivery or  #[span.text-primary logistics services] or fulfillment, defined freight forwarding, or a complete supply chain solution, we are here for you.
+				p We think about our customers and our work based on such values as:
+				.row.row-30
+					.col-lg-5.col-md-6
+						ul.list-marked.text-dark-blue
+							li Quality;
+							li Speed;
+							li Integrity;
+							li Affordability;
+							li Efficiency;
+					.col-lg-5.col-md-6
+						ul.list-marked.text-dark-blue
+							li Innovations;
+							li Responsibility;
+							li Preciseness;
+							li Friendliness;
+
+
